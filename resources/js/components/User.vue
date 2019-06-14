@@ -92,9 +92,21 @@
                                        </div>
 
                                    </div>
+                                   <div v-if="tipoAccion==1" class="col-md-6">
+                                       <div class="form-group">
+                                           <label>Rol</label>
+                                           <select class="form-control" v-model="role_id">
+
+                                               <option v-for="role in arrayRoles" :key="role.id" :value="role.id" v-text="role.description"></option>
+                                           </select>
+
+                                       </div>
+
+                                   </div>
 
 
                                </div>
+
 
                            </div>
 
@@ -123,7 +135,7 @@
                name:'',
                email:'',
                password:'',
-               //role_id:0,
+               role_id:0,
                tipoAccion:'',
                titleModal:'',
                errorMostrarUser:[],
