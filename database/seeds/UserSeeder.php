@@ -17,7 +17,7 @@ class UserSeeder extends Seeder
         $userAdmin=User::create([
             'name'=>'admin',
             'role_id'=>1,
-            'email'=>'admin@admin.com',
+            'email'=>'admin@test.com',
             'password'=>bcrypt('1234'),
 
 
@@ -25,7 +25,7 @@ class UserSeeder extends Seeder
         $userEmployee=User::create([
             'name'=>'empleado',
             'role_id'=>2,
-            'email'=>'empleado@empleado.com',
+            'email'=>'empleado@test.com',
             'password'=>bcrypt('1234'),
 
 
