@@ -2233,16 +2233,6 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
 
 /* harmony default export */ __webpack_exports__["default"] = ({
   data: function data() {
@@ -2253,7 +2243,7 @@ __webpack_require__.r(__webpack_exports__);
       name: '',
       email: '',
       password: '',
-      role_id: 0,
+      //role_id:0,
       tipoAccion: '',
       titleModal: '',
       errorMostrarUser: [],
@@ -2301,8 +2291,8 @@ __webpack_require__.r(__webpack_exports__);
         this.id = user.id;
         this.name = user.name;
         this.email = user.email;
-        this.password = user.password;
-        this.role_id = user.role_id;
+        this.password = user.password; //this.role_id=user.role_id;
+
         this.tipoAccion = 2;
         this.titleModal = 'Actualizar usuario';
       }
@@ -2347,8 +2337,8 @@ __webpack_require__.r(__webpack_exports__);
         'id': me.id,
         'name': me.name,
         'email': me.email,
-        'password': me.password,
-        'role_id': me.role_id
+        'password': me.password //'role_id':me.role_id,
+
       }).then(function () {
         sweetalert2__WEBPACK_IMPORTED_MODULE_0___default.a.fire('buen trabajo!', 'usuario actualizado correctamente!', 'success');
         me.cerrarModal();
@@ -41171,53 +41161,6 @@ var render = function() {
                             }
                           })
                         ])
-                      ]),
-                      _vm._v(" "),
-                      _c("div", { staticClass: "col-md-6" }, [
-                        _c("div", { staticClass: "form-group" }, [
-                          _c("label", [_vm._v("Rol")]),
-                          _vm._v(" "),
-                          _c(
-                            "select",
-                            {
-                              directives: [
-                                {
-                                  name: "model",
-                                  rawName: "v-model",
-                                  value: _vm.role_id,
-                                  expression: "role_id"
-                                }
-                              ],
-                              staticClass: "form-control",
-                              on: {
-                                change: function($event) {
-                                  var $$selectedVal = Array.prototype.filter
-                                    .call($event.target.options, function(o) {
-                                      return o.selected
-                                    })
-                                    .map(function(o) {
-                                      var val =
-                                        "_value" in o ? o._value : o.value
-                                      return val
-                                    })
-                                  _vm.role_id = $event.target.multiple
-                                    ? $$selectedVal
-                                    : $$selectedVal[0]
-                                }
-                              }
-                            },
-                            _vm._l(_vm.arrayRoles, function(role) {
-                              return _c("option", {
-                                key: role.id,
-                                domProps: {
-                                  value: role.id,
-                                  textContent: _vm._s(role.description)
-                                }
-                              })
-                            }),
-                            0
-                          )
-                        ])
                       ])
                     ])
                   ])
@@ -53775,8 +53718,8 @@ __webpack_require__.r(__webpack_exports__);
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-__webpack_require__(/*! C:\xampp\htdocs\test-empleados\resources\js\app.js */"./resources/js/app.js");
-module.exports = __webpack_require__(/*! C:\xampp\htdocs\test-empleados\resources\sass\app.scss */"./resources/sass/app.scss");
+__webpack_require__(/*! C:\xampp\htdocs\test-empleados-\resources\js\app.js */"./resources/js/app.js");
+module.exports = __webpack_require__(/*! C:\xampp\htdocs\test-empleados-\resources\sass\app.scss */"./resources/sass/app.scss");
 
 
 /***/ })

@@ -92,17 +92,7 @@
                                        </div>
 
                                    </div>
-                                   <div class="col-md-6">
-                                       <div class="form-group">
-                                           <label>Rol</label>
-                                           <select class="form-control" v-model="role_id">
 
-                                               <option v-for="role in arrayRoles" :key="role.id" :value="role.id" v-text="role.description"></option>
-                                           </select>
-
-                                       </div>
-
-                                   </div>
 
                                </div>
 
@@ -133,7 +123,7 @@
                name:'',
                email:'',
                password:'',
-               role_id:0,
+               //role_id:0,
                tipoAccion:'',
                titleModal:'',
                errorMostrarUser:[],
@@ -198,7 +188,7 @@
                     this.name=user.name;
                     this.email=user.email;
                     this.password=user.password;
-                    this.role_id=user.role_id;
+                    //this.role_id=user.role_id;
                     this.tipoAccion = 2;
                     this.titleModal='Actualizar usuario'
                 }
@@ -262,7 +252,7 @@
                          'name':me.name,
                         'email':me.email,
                         'password':me.password,
-                        'role_id':me.role_id,
+                        //'role_id':me.role_id,
 
                     }).then(function(){
                     Swal.fire(

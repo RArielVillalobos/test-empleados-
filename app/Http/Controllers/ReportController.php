@@ -26,6 +26,7 @@ class ReportController extends Controller
 
 
         //todos los reportes
+        //si el usuario  es admin
         if(auth()->user()->has_role(1)){
 
             $reports=Report::with('employee.user')->orderBy('id','desc')->paginate(3);
@@ -69,6 +70,7 @@ class ReportController extends Controller
             abort(403);
 
         }
+        //si el usuario tiene el rol de empleado puede generar un reporte
         $this->authorize('create',Report::class);
         $request->merge(['employee_id'=>auth()->user()->employee->id]);
 
@@ -112,16 +114,12 @@ class ReportController extends Controller
             abort(403);
 
         }
-
         $report=Report::find($request->id);
+        //si el empleado autenticado,fue el que genero el error lo puede actualizar
         $this->authorize('update',$report);
         $report->description=$request->description;
         $report->date=$request->date;
         $report->save();
-
-
-
-
 
     }
 
