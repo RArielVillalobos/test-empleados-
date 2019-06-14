@@ -46,7 +46,10 @@ class UserController extends Controller
         $user=User::find($request->id);
         $this->authorize('update',$user);
         $user->name=$request->name;
-        $user->password=bcrypt($request->password);
+        if($request->password!=null){
+            $user->password=bcrypt($request->password);
+        }
+
         $user->email=$request->email;
         //$user->role_id=$request->role_id;
         $user->update();
